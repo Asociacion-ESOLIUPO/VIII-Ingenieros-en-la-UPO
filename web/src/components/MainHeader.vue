@@ -1,4 +1,3 @@
-vue
 <template>
   <header>
     <h1>VIII Jornadas Ingenieros en la UPO</h1>
@@ -9,10 +8,14 @@ vue
         <li><a href="/ingenierosUpo">¿Qué es el Ingenieros en la UPO?</a></li>
         <li><a href="/entradas">Sobre las entradas</a></li>
         <li><a href="/evento">¿En qué consiste el evento?</a></li>
-        <li><a href="/organizadoresYapoyo">Organizadores y Apoyo Institucional</a></li>
+        <li>
+          <a href="/organizadoresYapoyo">Organizadores y Apoyo Institucional</a>
+        </li>
         <li><a href="/impacto">Nuestro Impacto</a></li>
         <li><a href="/patrocinios">Patrocinadores</a></li>
-        <li><a href="inversionPatrocinio">¿En qué invertiremos el patrocinio?</a></li>
+        <li>
+          <a href="inversionPatrocinio">¿En qué invertiremos el patrocinio?</a>
+        </li>
         <li><a href="/contact">Contact</a></li>
       </ul>
     </nav>
@@ -21,8 +24,8 @@ vue
 
 <script>
 export default {
-  name: 'Header'
-}
+  name: "mainHeader",
+};
 </script>
 
 <style scoped>

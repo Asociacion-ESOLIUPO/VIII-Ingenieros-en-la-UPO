@@ -13,7 +13,7 @@
 
 <script setup>
 import { ref } from "vue";
-import GrowingLine from "./GrowingLine.vue";
+
 let headerItems = ref([
   { href: "/", text: "Inicio" },
   { href: "/about", text: "Quiénes somos" },

@@ -1,7 +1,7 @@
 <template>
-  <header>
+  <div class="main-header">
     <h1>VIII Jornadas Ingenieros en la UPO</h1>
-    <nav>
+    <nav class="main-header--navbar">
       <ul>
         <li><a href="/">Inicio</a></li>
         <li><a href="/about">Quiénes somos</a></li>
@@ -19,33 +19,29 @@
         <li><a href="/contact">Contact</a></li>
       </ul>
     </nav>
-  </header>
+  </div>
 </template>
 
-<script>
-export default {
-  name: "mainHeader",
-};
-</script>
+<script setup></script>
 
 <style scoped>
-header {
+.main-header {
   background-color: #f0f0f0;
   padding: 20px;
   text-align: center;
 }
 
-nav ul {
+.main-header--navbar ul {
   list-style: none;
   padding: 0;
 }
 
-nav li {
+.main-header--navbar li {
   display: inline;
   margin: 0 10px;
 }
 
-nav a {
+.main-header--navbar a {
   text-decoration: none;
   color: #333;
 }

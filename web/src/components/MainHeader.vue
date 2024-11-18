@@ -3,26 +3,30 @@
     <h1>VIII Jornadas Ingenieros en la UPO</h1>
     <nav class="main-header--navbar">
       <ul>
-        <li><a href="/">Inicio</a></li>
-        <li><a href="/about">Quiénes somos</a></li>
-        <li><a href="/ingenierosUpo">¿Qué es el Ingenieros en la UPO?</a></li>
-        <li><a href="/entradas">Sobre las entradas</a></li>
-        <li><a href="/evento">¿En qué consiste el evento?</a></li>
-        <li>
-          <a href="/organizadoresYapoyo">Organizadores y Apoyo Institucional</a>
+        <li v-for="item in headerItems" :key="item.href">
+          <a :href="item.href">{{ item.text }}</a>
         </li>
-        <li><a href="/impacto">Nuestro Impacto</a></li>
-        <li><a href="/patrocinios">Patrocinadores</a></li>
-        <li>
-          <a href="inversionPatrocinio">¿En qué invertiremos el patrocinio?</a>
-        </li>
-        <li><a href="/contact">Contact</a></li>
       </ul>
     </nav>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { ref } from "vue";
+import GrowingLine from "./GrowingLine.vue";
+let headerItems = ref([
+  { href: "/", text: "Inicio" },
+  { href: "/about", text: "Quiénes somos" },
+  { href: "/ingenierosUpo", text: "¿Qué es el Ingenieros en la UPO?" },
+  { href: "/entradas", text: "Sobre las entradas" },
+  { href: "/evento", text: "¿En qué consiste el evento?" },
+  { href: "/organizadoresYapoyo", text: "Organizadores y Apoyo Institucional" },
+  { href: "/impacto", text: "Nuestro Impacto" },
+  { href: "/patrocinios", text: "Patrocinadores" },
+  { href: "/inversionPatrocinio", text: "¿En qué invertiremos el patrocinio?" },
+  { href: "/contact", text: "Contact" },
+]);
+</script>
 
 <style scoped>
 .main-header {
@@ -31,13 +35,19 @@
   text-align: center;
 }
 
+.main-header--navbar {
+  margin-top: 20px;
+}
+
 .main-header--navbar ul {
+  display: flex;
   list-style: none;
   padding: 0;
 }
 
 .main-header--navbar li {
   display: inline;
+  padding: 3px;
   margin: 0 10px;
 }
 
